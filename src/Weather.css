@@ -3,7 +3,6 @@
   border-radius: 6px;
   color: grey;
   padding: 16px;
-  margin: 16px;
 }
 
 .Weather ul {
@@ -17,9 +16,33 @@
 
 .Weather h1 {
   display: block;
+  color: black;
   font-size: 24px;
   font-weight: 400;
   padding-top: 10px;
+}
 
+.Weather .temperature {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 64px;
+  color: black;
+}
 
+.Weather img {
+  height: 64px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: -20px
+}
+
+.Weather .unit {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  top: -34px;
+  line-height: 1;
+  margin-left: 5px;
 }
