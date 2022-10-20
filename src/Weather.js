@@ -39,7 +39,7 @@ export default function Weather() {
           <span className="unit">°C</span>
         </div>
 
-        <div className="col-6">
+        <div className="col-6 ">
           <ul>
             <li>Precipitation: 15%</li>
             <li>Humidity: 72%</li>
