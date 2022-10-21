@@ -11,11 +11,6 @@ export default function FormattedDate(props) {
     "Saturday",
   ];
   let day = days[props.date.getDay()];
-  let hours = props.hour.getHour();
-  let minutes = props.minutes.getMinutes();
-  return (
-    <div>
-      {day} {hours}:{minutes}
-    </div>
-  );
+
+  return <div>{day}</div>;
 }
