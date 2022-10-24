@@ -30,11 +30,12 @@
 }
 
 .Weather img {
-  height: 64px;
+  height: 90px;
   display: inline-block;
-  margin-right: 5px;
   position: relative;
-  top: -20px
+  top: -22px;
+  margin-left: -16px;
+  margin-right: 5px;
 }
 
 .Weather .unit {
@@ -44,5 +45,8 @@
   position: relative;
   top: -34px;
   line-height: 1;
+}
 
+.Weather .properties {
+  margin-top: 3px;
 }
