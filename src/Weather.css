@@ -59,3 +59,36 @@
 .WeatherTemperature a {
   text-decoration-line: none;
 }
+
+.Weather .searchButton {
+  margin-left: -23px;
+}
+
+@media (max-width:576px) {
+  .Weather .temp {
+    font-size: 55px;
+    font-weight: 400;
+    padding: 0;
+    color: black;
+    position: relative;
+    top: -3px;
+    margin-left: -35px;
+    margin-right: 35px;
+  }
+
+  .Weather .unit {
+    color: black;
+    font-size: 11px;
+    position: relative;
+    top: -32px;
+    padding: 0;
+  }
+
+  .Weather img {
+    height: 68px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-left: -16px;
+  }
+}
