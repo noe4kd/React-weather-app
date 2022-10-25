@@ -2,7 +2,7 @@
   border: 1px solid grey;
   border-radius: 6px;
   color: grey;
-  padding: 16px;
+  padding: 18px;
 }
 
 .Weather ul {
@@ -22,18 +22,22 @@
   padding-top: 10px;
 }
 
-.Weather .temperature {
+.Weather .temp {
   font-size: 64px;
   font-weight: 400;
   line-height: 64px;
   color: black;
+  position: relative;
+  top: -3px;
+  margin-left: -78px;
+  margin-right: 78px;
 }
 
 .Weather img {
-  height: 90px;
+  height: 82px;
   display: inline-block;
   position: relative;
-  top: -22px;
+  top: -8px;
   margin-left: -16px;
   margin-right: 5px;
 }
@@ -45,6 +49,7 @@
   position: relative;
   top: -34px;
   line-height: 1;
+  margin-left: 5px;
 }
 
 .Weather .properties {
