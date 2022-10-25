@@ -55,3 +55,7 @@
 .Weather .properties {
   margin-top: 3px;
 }
+
+.WeatherTemperature a {
+  text-decoration-line: none;
+}
