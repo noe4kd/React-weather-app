@@ -1,10 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./WeatherForecast.css";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState();
+  let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.data.city]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -16,27 +21,26 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <div className="WeatherForecast-day">Thu </div>
-            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"></img>{" "}
-            <div className="WeatherForcast-temperature">
-              <spann className="WeatherForecast-temperature-max me-1">
-                19°
-              </spann>
-              <spann className="WeatherForecast-temperature-min opacity-75 ms-1">
-                10°
-              </spann>
-            </div>
-          </div>
+          {forecast.map(function (dailyforecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col">
+                  <WeatherForecastDay data={dailyforecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
     );
   } else {
     let apiKey = "342951afb0fafa28b3f533o92049314t";
-    let latitude = props.coordinates.longitude;
-    let longitude = props.coordinates.latitude;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+    let city = props.data.city;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
   }
+  return null;
 }
