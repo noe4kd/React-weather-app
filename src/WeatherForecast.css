@@ -13,3 +13,39 @@
   top: -2px;
   margin-left: 3px;
 }
+
+.WeatherForecast .WeatherForecast-day {
+  padding-top: 10px;
+  color: rgb(43, 43, 98);
+  text-shadow: 0.5px 0.5px 1px rgb(128, 120, 167), 0 0 2em rgb(132, 132, 185), 0 0 0.3em rgb(222, 220, 223);
+}
+
+.WeatherForecast .WeatherForecast-temp {
+  margin-top: 22 px;
+  color: rgb(43, 43, 98);
+  text-shadow: 0.5px 0.5px 1px rgb(128, 120, 167), 0 0 2em rgb(132, 132, 185), 0 0 0.3em rgb(222, 220, 223);
+}
+
+.WeatherForecast .WeatherForecast-max {
+  font-weight: bold;
+}
+
+@media (max-width:576px) {
+  .WeatherForecast img {
+    height: 52px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-left: 3px;
+  }
+
+  .WeatherForecast .WeatherForecast-day {
+    padding-top: 10px;
+    font-size: bold;
+  }
+
+  .WeatherForecast .WeatherForecast-temp {
+    font-size: 15px;
+  }
+
+}

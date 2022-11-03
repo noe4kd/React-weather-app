@@ -10,13 +10,12 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      coordinates: response.data.coordinates,
-      temperature: response.data.temperature.current,
+      temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       iconUrl: response.data.condition.icon_url,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       city: response.data.city,
     });
   }
@@ -29,7 +28,7 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search(city);
+    search();
   }
   function handleCity(event) {
     setCity(event.target.value);
@@ -51,7 +50,7 @@ export default function Weather(props) {
             </div>
             <div className="col-3 searchButton">
               <input
-                type="submit"
+                type="Submit"
                 value="Search"
                 className="btn btn-primary w-100"
               />
@@ -59,7 +58,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {

@@ -4,6 +4,7 @@
   border-radius: 15px;
   color: grey;
   padding: 18px;
+  background: radial-gradient(circle at 0% 0.8%, rgba(204, 235, 252, 0.968) 0.1%, rgb(212, 211, 231) 100.4%);
 }
 
 .Weather ul {
@@ -13,6 +14,7 @@
 
 .Weather li {
   list-style: none;
+  color: #21214e;
 }
 
 .Weather h1 {
@@ -26,14 +28,14 @@
 }
 
 .Weather .temp {
-  font-size: 64px;
+  font-size: 62px;
   font-weight: 400;
   line-height: 64px;
   color: black;
   position: relative;
   top: -3px;
-  margin-left: -78px;
-  margin-right: 78px;
+  margin-left: -66px;
+  margin-right: 66px;
 }
 
 .Weather img {
@@ -47,12 +49,12 @@
 
 .Weather .unit {
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   position: relative;
   top: -34px;
   line-height: 1;
-  margin-left: 5px;
+  margin-left: -3px;
 }
 
 .Weather .properties {
@@ -83,7 +85,7 @@
 
 @media (max-width:576px) {
   .Weather .temp {
-    font-size: 55px;
+    font-size: 49px;
     font-weight: 400;
     padding: 0;
     color: black;
@@ -95,9 +97,9 @@
 
   .Weather .unit {
     color: black;
-    font-size: 11px;
+    font-size: 10px;
     position: relative;
-    top: -32px;
+    top: -28px;
     padding: 0;
   }
 
@@ -108,4 +110,10 @@
     top: -2px;
     margin-left: -16px;
   }
+
+  .Weather .properties {
+    margin-top: 4px;
+    font-size: 15px;
+  }
+
 }
